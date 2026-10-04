@@ -14,13 +14,16 @@
 /.zed
 /auth.json
 /node_modules
-/public/build
+# ---- `production` branch ONLY: these ARE committed here (self-contained repo) ----
+# /public/build   → Vite assets are shipped so the server never runs `npm run build`
+# /vendor         → PHP deps are shipped so the server never runs `composer install`
+# (On `main` these two lines are active again: keep them uncommented there.)
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
 /storage/*.key
 /storage/pail
-/vendor
+# /vendor
 _ide_helper.php
 
 # Development-only (excluded from production builds / deploys)
